@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="text-editor.css">
+</head>
+<body>
+	<!--
+	<div class="text-editor-container">
+		<div class="tabset">
+			<input type="radio" name="tabset" id="text-format" aria-controls="text-format-container" checked>
+			<label for="text-format">Text Format</label>
+			
+			<input type="radio" name="tabset" id="insert" aria-controls="insert-container" checked>
+			<label for="insert">Insert</label>
+
+			<div class="tab-panels">
+				<section id="text-format-container" class="tab-panel">
+					<div style="margin: 5px;">
+						<div class="component-container">
+							<div class="font-settings" style="padding: 5px;border-right: 1px solid gray;display: inline-block">
+								<button class="font-weight-settings text-editor-btn" data-font-set="bold"><b>B</b></button>
+								<button class="font-weight-settings text-editor-btn" data-font-set="italic"><i>I</i></button>
+								<button class="font-weight-settings text-editor-btn" data-font-set="underline"><u>U</u></button>
+								<button class="font-weight-settings text-editor-btn" data-font-set="strikeThrough"><strike>xyz</strike></button>
+								<button class="font-weight-settings text-editor-btn" data-font-set="subscript">x<sub>2</sub></button>
+								<button class="font-weight-settings text-editor-btn" data-font-set="superscript">x<sup>2</sup></button>
+							</div>
+							<div class="font-type-size" style="display: inline-block">
+								<select class="font-type-select">
+									<option value="1">Arial</option>
+									<option value="2">Roboto</option>
+									<option value="3">Time News Roman</option>
+									<option value="4">Myriad</option>
+								</select>
+								<select class="font-size-select">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
+								<button class="text-editor-btn font-size-btn" data-size="increase">A<sup>&#30;</sup></button>
+								<button class="text-editor-btn font-size-btn" data-size="increase">A<sup>&#31;</sup></button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="insert-container" class="tab-panel">456</section>
+			</div>
+		</div>
+		<div style="width: 500px;height: 500px" contenteditable></div>
+	</div>
+-->
+
+<div class="hnid-teditor-c">
+	<div class="hnid-teditor-header">
+		<div class="hnid-tabset">
+			<input type="radio" name="tabset" id="text-format" aria-controls="hnid-txt-format-c" checked>
+			<label for="text-format">Text Format</label>
+
+			<input type="radio" name="tabset" id="insert" aria-controls="hnid-insr-c">
+			<label for="insert">Insert</label>
+
+			<div class="hnid-tab-panels">
+				<div class="hnid-tab-panel" id="hnid-txt-format-c">
+					<div class="txt-fm-cop-st">
+						<div>
+							<button class="txt-fm-cop-btn" data-format-command="bold"><b>B</b></button>
+							<button class="txt-fm-cop-btn" data-format-command="italic"><i>I</i></button>
+							<button class="txt-fm-cop-btn" data-format-command="underline"><u>U</u></button>
+							<button class="txt-fm-cop-btn" data-format-command="strikeThrough"><strike>xyz</strike></button>
+							<button class="txt-fm-cop-btn" data-format-command="subscript">x<sub>2</sub></button>
+							<button class="txt-fm-cop-btn" data-format-command="superscript">x<sup>2</sup></button>
+						</div>
+						<div style="margin-top: 5px;">
+							<select id="txt-fm-sl-f-family" class="txt-fm-sl">
+								<option value="arial">Arial</option>
+								<option value="sans-serif">Sans Serif</option>
+							</select>
+							<select id="txt-fm-sl-f-size" class="txt-fm-sl">
+								<option value="12">12</option>
+								<option value="14">14</option>
+								<option value="16">16</option>
+								<option value="18">18</option>
+								<option value="20">20</option>
+								<option value="22">22</option>
+								<option value="24">24</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="hnid-tab-panel" id="hnid-insr-c">
+					456
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hnid-teditor-body center-element">
+		<textarea id="hnid-content" contenteditable>
+		</textarea>
+	</div>
+	<div class="hnid-teditor-footer">
+		
+	</div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="text-editor.js"></script>
+</body>
+</html>
