@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="text-editor.css">
 </head>
 <body>
@@ -63,41 +64,99 @@
 
 			<div class="hnid-tab-panels">
 				<div class="hnid-tab-panel" id="hnid-txt-format-c">
-					<div class="txt-fm-cop-st">
-						<div>
-							<button class="txt-fm-cop-btn" data-format-command="bold"><b>B</b></button>
-							<button class="txt-fm-cop-btn" data-format-command="italic"><i>I</i></button>
-							<button class="txt-fm-cop-btn" data-format-command="underline"><u>U</u></button>
-							<button class="txt-fm-cop-btn" data-format-command="strikeThrough"><strike>xyz</strike></button>
-							<button class="txt-fm-cop-btn" data-format-command="subscript">x<sub>2</sub></button>
-							<button class="txt-fm-cop-btn" data-format-command="superscript">x<sup>2</sup></button>
-						</div>
-						<div style="margin-top: 5px;">
-							<select id="txt-fm-sl-f-family" class="txt-fm-sl">
-								<option value="arial">Arial</option>
-								<option value="sans-serif">Sans Serif</option>
-							</select>
-							<select id="txt-fm-sl-f-size" class="txt-fm-sl">
-								<option value="12">12</option>
-								<option value="14">14</option>
-								<option value="16">16</option>
-								<option value="18">18</option>
-								<option value="20">20</option>
-								<option value="22">22</option>
-								<option value="24">24</option>
-							</select>
-						</div>
-					</div>
+					<button class="txt-fm-cop-btn" data-format-command="bold"><i class="fas fa-bold"></i></button>
+					<button class="txt-fm-cop-btn" data-format-command="italic"><i class="fas fa-italic"></i></button>
+					<button class="txt-fm-cop-btn" data-format-command="underline"><i class="fas fa-underline"></i></button>
+					<button class="txt-fm-cop-btn" data-format-command="strikeThrough"><i class="fas fa-strikethrough"></i></button>
+					<button class="txt-fm-cop-btn" data-format-command="subscript"><i class="fas fa-subscript"></i></button>
+					<button class="txt-fm-cop-btn" data-format-command="superscript"><i class="fas fa-superscript"></i></button>
+					<button>
+						<i class="fas fa-text-height"></i>
+					</button>
+					<button><i class="fas fa-eraser"></i></button>
+					<input type="color" name="fontClrPicker" style="display: none" id="fontClrPicker">
+					<label for="fontClrPicker" style="font-size: 15px;margin-left: 5px;color: #4C4C4C"><i class="fas fa-tint"></i></label>
+
+					<input type="color" name="fontbackClrPicker" style="display: none" id="fontbackClrPicker">
+					<label for="fontbackClrPicker" style="font-size: 15px;margin-left: 10px;color: #4C4C4C">
+						<i class="fas fa-fill-drip"></i>
+					</label>
+
+					<select id="txt-fm-sl-f-family" class="txt-fm-sl">
+						<option value="arial">Arial</option>
+						<option value="sans-serif">Sans Serif</option>
+					</select>
+					<select id="txt-fm-sl-f-size" class="txt-fm-sl">
+						<option value="12">12</option>
+						<option value="14">14</option>
+						<option value="16">16</option>
+						<option value="18">18</option>
+						<option value="20">20</option>
+						<option value="22">22</option>
+						<option value="24">24</option>
+					</select>
+					<button>
+						<i class="fas fa-paragraph"></i>
+					</button>
+					<button class="hidden-select" style="display: inline-block;" id="hnid-al-sl">
+						<i>&#xf036;</i>
+						<select id="hnid-al-sl">
+							<option value="justifyLeft">
+								<i>&#xf036;</i>
+							</option>
+							<option value="justifyRight">
+								<i>&#xf038;</i>
+							</option>
+							<option value="justifyCenter">
+								<i>&#xf037;</i>
+							</option>
+							<option value="justifyFull">
+								<i>&#xf039;</i>
+							</option>
+						</select>
+					</button>
+					<button>
+						<i class="fas fa-grip-lines"></i>
+					</button>
+					<button id="hnid-quote-ge">
+						<i class="fas fa-quote-right"></i>
+					</button>
+					<button class="txt-fm-cop-btn" data-format-command="indent">
+						<i class="fas fa-indent"></i>
+					</button>
+					<button class="txt-fm-cop-btn" data-format-command="outdent">
+						<i class="fas fa-outdent"></i>
+					</button>
+					
+					<button class="txt-fm-cop-btn fm-order-l-btn" data-format-command="insertUnorderedList">
+						<i class="fas fa-list-ul"></i>
+					</button>
+					<button class="txt-fm-cop-btn fm-order-l-btn" data-format-command="insertOrderedList">
+						<i class="fas fa-list-ol"></i>
+					</button>
+					<button>
+						<i class="fas fa-th-list"></i>
+					</button>
+
+					<button>
+						<i class="fas fa-search"></i>
+					</button>
+					<button>
+						<i class="fas fa-language"></i>
+					</button>
+					<button>
+						<i class="fas fa-link"></i>
+					</button>
 				</div>
 				<div class="hnid-tab-panel" id="hnid-insr-c">
-					456
+					
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="hnid-teditor-body center-element">
-		<textarea id="hnid-content" contenteditable>
-		</textarea>
+		<div id="hnid-content" contenteditable>
+		</div>
 	</div>
 	<div class="hnid-teditor-footer">
 		
